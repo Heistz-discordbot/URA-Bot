@@ -1,42 +1,98 @@
+const { REST, Routes, SlashCommandBuilder } = require("discord.js");
 require("dotenv").config();
 
-const { REST, Routes, SlashCommandBuilder } = require("discord.js");
 
 const commands = [
+
     new SlashCommandBuilder()
         .setName("ping")
-        .setDescription("Checks if the bot is online"),
+        .setDescription("Check bot latency"),
+
 
     new SlashCommandBuilder()
         .setName("say")
-        .setDescription("Make the bot say something")
+        .setDescription("Send a message as the bot")
         .addStringOption(option =>
             option
                 .setName("message")
-                .setDescription("The message you want the bot to send")
+                .setDescription("Message to send")
                 .setRequired(true)
-        )
+        ),
+
+
+    new SlashCommandBuilder()
+        .setName("battle")
+        .setDescription("Open the URA Battle System")
+
 ].map(command => command.toJSON());
 
 
-const rest = new REST({ version: "10" }).setToken(process.env.TOKEN);
 
-const CLIENT_ID = "1533515596283642147";
+const rest = new REST({
+    version: "10"
+}).setToken(process.env.TOKEN);
 
 
-async function main() {
+
+async function deployCommands() {
+
     try {
-        console.log("Registering commands...");
+
+        console.log("🔄 Registering URA commands...");
+
+
+        if(!process.env.CLIENT_ID){
+
+            throw new Error(
+                "Missing CLIENT_ID in .env"
+            );
+
+        }
+
+
+        if(!process.env.GUILD_ID){
+
+            throw new Error(
+                "Missing GUILD_ID in .env"
+            );
+
+        }
+
 
         await rest.put(
-            Routes.applicationCommands(CLIENT_ID),
-            { body: commands }
+
+            Routes.applicationGuildCommands(
+
+                process.env.CLIENT_ID,
+
+                process.env.GUILD_ID
+
+            ),
+
+            {
+                body: commands
+            }
+
         );
 
-        console.log("Successfully registered commands!");
-    } catch (error) {
+
+        console.log(
+            "✅ URA commands registered successfully!"
+        );
+
+
+    } catch(error) {
+
+        console.error(
+            "❌ Command deployment failed:"
+        );
+
         console.error(error);
+
     }
+
 }
 
-main();
+
+
+deployCommands();
