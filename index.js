@@ -90,7 +90,7 @@ const {
     handleScoreSubmit,
     handleEndDuel,
     handleDeleteChannel
-} = require("./systems/duel/scoreSystem");
+} = require('./systems/duel/ScoreSystem');
 
 
 // =====================
