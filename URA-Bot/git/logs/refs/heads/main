@@ -1,0 +1,8 @@
+0000000000000000000000000000000000000000 5b5ce1d8fcc788850174e7577478da66d63163fc Heistz-discordbot <kavithasridhar2011@gmail.com> 1785759567 +0530	commit (initial): Clean bot upload
+5b5ce1d8fcc788850174e7577478da66d63163fc 5b5ce1d8fcc788850174e7577478da66d63163fc Heistz-discordbot <kavithasridhar2011@gmail.com> 1785759573 +0530	Branch: renamed refs/heads/master to refs/heads/main
+5b5ce1d8fcc788850174e7577478da66d63163fc 8ff8c0af592dbf0a74ccaaef01f07b11ece7cb7d Heistz-discordbot <kavithasridhar2011@gmail.com> 1785760653 +0530	commit: Add Render port support
+8ff8c0af592dbf0a74ccaaef01f07b11ece7cb7d 87c3c88d6aea9b020061c4aa89d255728a9be9ca Heistz-discordbot <kavithasridhar2011@gmail.com> 1785761593 +0530	commit: Create URA battle hub
+87c3c88d6aea9b020061c4aa89d255728a9be9ca d31efbaee304de6150e93ce8ae4a53b5c345805c Heistz-discordbot <kavithasridhar2011@gmail.com> 1785761707 +0530	commit: Update commands
+d31efbaee304de6150e93ce8ae4a53b5c345805c a2afbb669e0a3dc8d39994990e16131c5d076129 Heistz-discordbot <kavithasridhar2011@gmail.com> 1785761873 +0530	commit: Reset bot interaction system
+a2afbb669e0a3dc8d39994990e16131c5d076129 763f4d6da18d291cf7a81fedd3b7d4af6311fcef Heistz-discordbot <kavithasridhar2011@gmail.com> 1785762069 +0530	commit: Fix bot system
+763f4d6da18d291cf7a81fedd3b7d4af6311fcef 5f9de108b39bf970e3b2bab87a5322727b2ac32f Heistz-discordbot <kavithasridhar2011@gmail.com> 1785762206 +0530	commit: Add ping and say commands
